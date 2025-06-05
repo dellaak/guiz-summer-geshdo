@@ -238,7 +238,27 @@ const questions: Question[] = [
     points: 100,
     isAnswered: false,
   },
- 
+    {
+    id: "mov3",
+    category: categoryEnums.Random,
+    text: "Vad heter planeten där Avatar(James cameron) utspelar sig?",
+    points: 100,
+    isAnswered: false,
+  },
+   {
+    id: "mov4",
+    category: categoryEnums.Random,
+    text: "Vad står inskrivet på ringen när den blir upphettad i elden? (One ring....)",
+    points: 100,
+    isAnswered: false,
+  },
+  {
+    id: "mov5",
+    category: categoryEnums.Random,
+    text: " Vad heter planeten där Luke Skywalker växer upp?",
+    points: 100,
+    isAnswered: false,
+  },
  
 
 ];
