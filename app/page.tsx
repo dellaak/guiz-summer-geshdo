@@ -26,7 +26,8 @@ enum categoryEnums{
   Disney ="Disney",
   Pokemon = "Pokémon",
   WhosThere ="Vem där?",
-  Random ="Random"
+  Random ="Random",
+  Movies = "Filmer"
 }
 
 
@@ -216,6 +217,28 @@ const questions: Question[] = [
     points: 100,
     isAnswered: false,
   },
+  {
+    id: "ran5",
+    category: categoryEnums.Random,
+    text: "Vilken trollformel från Harry Potter används för att låsa upp dörrar?",
+    points: 100,
+    isAnswered: false,
+  },
+   {
+    id: "mov1",
+    category: categoryEnums.Random,
+    text: "Vilken regissör gjorde Inception, Interstellar och Oppenheimer?",
+    points: 100,
+    isAnswered: false,
+  },
+    {
+    id: "mov2",
+    category: categoryEnums.Random,
+    text: " I vilken film finns karaktären Katniss Everdeen?",
+    points: 100,
+    isAnswered: false,
+  },
+ 
  
 
 ];
