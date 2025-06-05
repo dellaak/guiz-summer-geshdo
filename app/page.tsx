@@ -86,15 +86,15 @@ const questions: Question[] = [
     category: categoryEnums.food,
     text: "Vad heter osten?",
     points: 100,
-   img: "./bilder/ost1.jpeg", 
+   img: "./bilder/ost1.jpeg",
     isAnswered: false,
   },
-  
+
       {
     id: "d1",
     category: categoryEnums.Disney,
     text: "Vems hår är detta?",
-    img: "./bilder/d1.jpg", 
+    img: "./bilder/d1.jpg",
     points: 100,
     isAnswered: false,
   },
@@ -102,7 +102,7 @@ const questions: Question[] = [
     id: "d2",
     category: categoryEnums.Disney,
     text: "Vems hår är detta?",
-    img: "./bilder/d2.jpg", 
+    img: "./bilder/d2.jpg",
     points: 100,
     isAnswered: false,
   },
@@ -110,7 +110,7 @@ const questions: Question[] = [
     id: "d3",
     category: categoryEnums.Disney,
     text: "Från vilken film kommer quoten ifrån ?",
-    img: "https://slideplayer.com/12975033/79/images/slide_1.jpg", 
+    img: "https://slideplayer.com/12975033/79/images/slide_1.jpg",
     points: 100,
     isAnswered: false,
   },
@@ -125,7 +125,7 @@ const questions: Question[] = [
     id: "9",
     category: categoryEnums.Pokemon,
     text: "Gissa pokemon",
-    img: "./bilder/p1.jpg", 
+    img: "./bilder/p1.jpg",
     points: 100,
     isAnswered: false,
   },
@@ -133,7 +133,7 @@ const questions: Question[] = [
     id: "10",
     category: categoryEnums.Pokemon,
     text: "Gissa pokemon",
-    img: "./bilder/p2.jpg", 
+    img: "./bilder/p2.jpg",
     points: 100,
     isAnswered: false,
   },
@@ -141,7 +141,7 @@ const questions: Question[] = [
     id: "11",
     category: categoryEnums.Pokemon,
     text: "Gissa pokemon",
-    img: "./bilder/p3.jpg", 
+    img: "./bilder/p3.jpg",
     points: 100,
     isAnswered: false,
   },
@@ -149,7 +149,7 @@ const questions: Question[] = [
     id: "12",
     category: categoryEnums.Pokemon,
     text: "Gissa pokemon",
-    img: "./bilder/p4.jpg", 
+    img: "./bilder/p4.jpg",
     points: 100,
     isAnswered: false,
   },
@@ -157,7 +157,7 @@ const questions: Question[] = [
     id: "13",
     category: categoryEnums.Pokemon,
     text: "Gissa pokemon",
-    img: "./bilder/p5.png", 
+    img: "./bilder/p5.png",
     points: 100,
     isAnswered: false,
   },
@@ -165,7 +165,7 @@ const questions: Question[] = [
     id: "14",
     category: categoryEnums.Pokemon,
     text: "Gissa pokemon",
-    img: "./bilder/p6.jpg", 
+    img: "./bilder/p6.jpg",
     points: 100,
     isAnswered: false,
   },
@@ -173,7 +173,7 @@ const questions: Question[] = [
     id: "v1",
     category: categoryEnums.WhosThere,
     text: "Vem är detta?",
-    imgs: ["./bilder/vd1.png", "./bilder/vd2.png","./bilder/vd3.png"], 
+    imgs: ["./bilder/vd1.png", "./bilder/vd2.png","./bilder/vd3.png"],
     points: 100,
     isAnswered: false,
   },
@@ -181,7 +181,15 @@ const questions: Question[] = [
     id: "t1",
     category: categoryEnums.WhosThere,
     text: "Vem är detta?",
-    imgs: ["./bilder/t1.png", "./bilder/t2.png","./bilder/t3.png"], 
+    imgs: ["./bilder/t1.png", "./bilder/t2.png","./bilder/t3.png"],
+    points: 100,
+    isAnswered: false,
+  },
+  {
+    id: "t11",
+    category: categoryEnums.WhosThere,
+    text: "Vem är detta?",
+    imgs: ["./bilder/bc1.jpg", "./bilder/bc2.jpg","./bilder/bc3.jpg","./bilder/bc4.jpg","./bilder/bc5.jpg","./bilder/bc6.jpg"],
     points: 100,
     isAnswered: false,
   },
@@ -199,7 +207,7 @@ const questions: Question[] = [
     points: 100,
     isAnswered: false,
   },
-  
+
          {
     id: "ran3",
     category: categoryEnums.Random,
@@ -216,7 +224,7 @@ const questions: Question[] = [
     points: 100,
     isAnswered: false,
   },
- 
+
 
 ];
 
@@ -266,8 +274,8 @@ const [teams, setTeams] = useState<Team[]>(() => {
 
   const awardPoints = () => {
     if (selectedTeam && selectedQuestion) {
-      setTeams(teams.map(team => 
-        team.name === selectedTeam 
+      setTeams(teams.map(team =>
+        team.name === selectedTeam
           ? { ...team, score: team.score + selectedQuestion.points }
           : team
       ));
@@ -294,7 +302,7 @@ const [teams, setTeams] = useState<Team[]>(() => {
             Summer Party Quiz
             <SunMedium className="h-8 w-8 text-yellow-500" />
           </h1>
-          
+
           <div className="flex gap-4 justify-center mb-8">
             <Input
               placeholder="Enter team name"
@@ -328,7 +336,7 @@ const [teams, setTeams] = useState<Team[]>(() => {
                   .filter(q => q.category === category)
                   .map((question,index) => (
                    <Card
-                   
+
   key={question.id}
   onClick={() => {
     if (!question.isAnswered) {
@@ -361,10 +369,10 @@ const [teams, setTeams] = useState<Team[]>(() => {
 <div style={{display:'flex',flexDirection:"column"}}>
 
         {question.imgs && question.imgs.map((item,index)=>{
-          
+
           return <a href={item} target="_blank"  style={{marginBottom:"10px",color:"blue"}} onClick={(e) => {
             e.stopPropagation();
-            
+
           }}>
           Link to image {index +1}
             </a>
@@ -373,7 +381,7 @@ const [teams, setTeams] = useState<Team[]>(() => {
 
       {question.img && <a href={question.img} target="_blank"  onClick={(e) => {
               e.stopPropagation();
-           
+
             }}>
               Länk till bild
             </a>}
