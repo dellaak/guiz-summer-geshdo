@@ -129,6 +129,14 @@ const questions: Question[] = [
     points: 100,
     isAnswered: false,
   },
+  {
+    id: "d6",
+    category: categoryEnums.Disney,
+    text: "Gissa skådespelaren",
+    imgs: ["./bilder/lkz.jpg", "https://www.youtube.com/watch?v=wdHRbZATyW8&ab_channel=TLKSongs"],
+    points: 100,
+    isAnswered: false,
+  },
      {
     id: "9",
     category: categoryEnums.Pokemon,
