@@ -26,7 +26,8 @@ enum categoryEnums{
   Disney ="Disney",
   Pokemon = "Pokémon",
   WhosThere ="Vem där?",
-  Random ="Random"
+  Random ="Random",
+  Movies = "Filmer"
 }
 
 
@@ -237,6 +238,41 @@ const questions: Question[] = [
     category: categoryEnums.Random,
     text: " Vad heter templet?",
     img:"https://static-cdn.sr.se/images/5053/d023330b-5e97-4234-aff4-8bb268f2b74f.jpg",
+    points: 100,
+    isAnswered: false,
+  },
+  {
+    id: "mov1",
+    category: categoryEnums.Movies,
+    text: "Vilken regissör gjorde Inception, Interstellar och Oppenheimer?",
+    points: 100,
+    isAnswered: false,
+  },
+    {
+    id: "mov2",
+    category: categoryEnums.Movies,
+    text: " I vilken film finns karaktären Katniss Everdeen?",
+    points: 100,
+    isAnswered: false,
+  },
+    {
+    id: "mov3",
+    category: categoryEnums.Movies,
+    text: "Vad heter planeten där Avatar(James cameron) utspelar sig?",
+    points: 100,
+    isAnswered: false,
+  },
+   {
+    id: "mov4",
+    category: categoryEnums.Movies,
+    text: "Vad står inskrivet på ringen när den blir upphettad i elden? (One ring....)",
+    points: 100,
+    isAnswered: false,
+  },
+  {
+    id: "mov5",
+    category: categoryEnums.Movies,
+    text: " Vad heter planeten där Luke Skywalker växer upp?",
     points: 100,
     isAnswered: false,
   },
