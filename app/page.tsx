@@ -193,6 +193,14 @@ const questions: Question[] = [
     points: 100,
     isAnswered: false,
   },
+  {
+    id: "t111",
+    category: categoryEnums.WhosThere,
+    text: "Vem är detta?",
+    imgs: ["./bilder/gw1.jpg", "./bilder/gw2.jpg","./bilder/gw3.jpg","./bilder/gw4.jpg","./bilder/gw5.jpg","./bilder/gw6.jpg","./bilder/gw7.jpg"],
+    points: 100,
+    isAnswered: false,
+  },
      {
     id: "ran1",
     category: categoryEnums.Random,
